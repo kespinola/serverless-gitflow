@@ -22,5 +22,7 @@ Set in `_meta/Variables/s-variables-common.json`
 ## Supported Endpoints
 
 ### `candidate~POST`
+1. Creates a candidate for the repo by comparing master vs develop.
+2. Evaluate merged PRs
 
 ### `release~POST`

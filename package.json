@@ -10,6 +10,9 @@
     "url": "git://github.com/"
   },
   "dependencies": {
+    "bluebird": "^3.3.5",
+    "github": "^0.2.4",
+    "immutable": "^3.8.1",
     "serverless-runtime-babel": "0.0.6"
   },
   "devDependencies": {

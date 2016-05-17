@@ -12,9 +12,9 @@ Set in `_meta/Variables/s-variables-common.json`
 
 ```
 "project": "serverless-gitflow",
-"github_token": "<YOUR_ROKEN>",
-"github_email": "ksespinola@gmail.com",
-"github_user": "ksespinola",
+"github_token": "<GITHUB_TOKEN>",
+"github_email": "<GITHUB_EMAIL>",
+"github_user": "<GITHUB_USER>",
 "repo": "prism-serverless",
 "master_branch": "master",
 "develop_branch": "develop"

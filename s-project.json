@@ -1,0 +1,7 @@
+{
+  "name": "serverless-gitflow",
+  "custom": {},
+  "plugins": [
+    "serverless-runtime-babel"
+  ]
+}

@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Candidate = ({ pulls }) => (
+const Candidate = ({ pulls, header }) => (
   <article>
-    <h1>Test Me</h1>
+    <h1>{header}</h1>
+    <ul>
+      {pulls.map(({ id, url, title }) =>(<li key={id}><a href={url}>{title}</a></li>))}
+    </ul>
   </article>
 );
 

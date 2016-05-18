@@ -2,6 +2,8 @@
 
 Easily manage gitflow with helpful endpoints for creating candidates and releases.
 
+![candidate body](https://raw.githubusercontent.com/ksespinola/serverless-gitflow/b213cccf4f11094f16625cf30056ed11409be574/public/candidate-body-screenshot.png)
+
 ## Goal
 
 Expose a serious of endpoints that make managing an affective gitflow with ease.

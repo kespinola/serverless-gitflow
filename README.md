@@ -7,8 +7,10 @@ Easily manage gitflow with helpful endpoints for creating candidates and release
 expose a serious of endpoints that make managing an affective gitflow with ease.
 
 ## Milestones
-- [ ] Create Candidate PR from develop to master
+- [X] Create candidate branch
+- [X] Make pull request from candidate to master
 - [ ] Build PR message using merge pull commits
+  - [X] Calculate pulls since last master merge
   - [ ] Pull Feature Labels
   - [ ] Note Assign
   - [ ] Slack assign

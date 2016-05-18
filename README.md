@@ -4,7 +4,7 @@ Easily manage gitflow with helpful endpoints for creating candidates and release
 
 ## Goal
 
-expose a serious of endpoints that make managing an affective gitflow with ease.
+Expose a serious of endpoints that make managing an affective gitflow with ease.
 
 ## Milestones
 - [X] Create candidate branch
@@ -16,7 +16,7 @@ expose a serious of endpoints that make managing an affective gitflow with ease.
   - [ ] Note Assign
   - [ ] Slack assign
 - [ ] Smart calculate version
-- [ ] Release webhook creates tag on master after merge
+- [ ] After merge into master release webhook tags a new release
 
 ## Set Up
 1. `npm install -g serverless`
@@ -37,7 +37,12 @@ Set in `_meta/Variables/s-variables-common.json`
 ## Supported Endpoints
 
 ### `candidate~POST`
+```
+sls function run candidate - Locally
+/gitflow candidate serverless-gitflow - Slack
+```
 1. Creates a candidate for the repo by comparing master vs develop.
-2. Evaluate merged PRs
+2. Shows list of merge pull requests
+3. Notifies assignees of release
 
 ### `release~POST`

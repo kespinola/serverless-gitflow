@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 
-const Candidate = ({ pulls, candidate }) => (
+const Candidate = ({ pulls, title }) => (
   <article>
-    <h1>{candidate}</h1>
+    <h1>{title}</h1>
     <ul>
       {pulls.map(({ id, url, title, number }) => (<li key={id}><a href={url}>{`#${number} - ${title}`}</a></li>))}
     </ul>
@@ -11,7 +11,7 @@ const Candidate = ({ pulls, candidate }) => (
 
 Candidate.propTypes = {
   pulls: PropTypes.array,
-  candidate: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Candidate;

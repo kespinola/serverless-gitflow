@@ -9,7 +9,11 @@
   "memorySize": 128,
   "authorizer": {},
   "custom": {
-    "excludePatterns": []
+    "runtime": {
+      "babel": {
+        "presets": ["es2015", "react"]
+      }
+    }
   },
   "endpoints": [
     {
@@ -21,7 +25,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": "{ \"release\" : $input.json(\"$.release\"), \"branch\": $input.json(\"$.branch\") }"
+        "application/json": "{ \"release\" : $input.json(\"$.release\"), \"user\": $input.json(\"$.user\"), \"repo\": $input.json(\"$.repo\") }"
       },
       "responses": {
         "400": {
@@ -46,11 +50,9 @@
     "SERVERLESS_STAGE": "${stage}",
     "SERVERLESS_REGION": "${region}",
     "GITHUB_TOKEN": "${github_token}",
-    "GITHUB_EMAIL": "${github_email}",
-    "GITHUB_USER": "${github_user}",
-    "REPO": "${repo}",
     "MASTER_BRANCH": "${master_branch}",
-    "DEVELOP_BRANCH": "${develop_branch}"
+    "DEVELOP_BRANCH": "${develop_branch}",
+    "CANDIDATE_NAME": "${candidate_name}"
   },
   "vpc": {
     "securityGroupIds": [],

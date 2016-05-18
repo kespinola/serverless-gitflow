@@ -11,9 +11,11 @@ expose a serious of endpoints that make managing an affective gitflow with ease.
 - [X] Make pull request from candidate to master
 - [ ] Build PR message using merge pull commits
   - [X] Calculate pulls since last master merge
+  - [X] Link to Pull Request
   - [ ] Pull Feature Labels
   - [ ] Note Assign
   - [ ] Slack assign
+- [ ] Smart calculate version
 - [ ] Release webhook creates tag on master after merge
 
 ## Set Up
@@ -27,11 +29,10 @@ Set in `_meta/Variables/s-variables-common.json`
 ```
 "project": "serverless-gitflow",
 "github_token": "<GITHUB_TOKEN>",
-"github_email": "<GITHUB_EMAIL>",
-"github_user": "<GITHUB_USER>",
 "repo": "prism-serverless",
 "master_branch": "master",
-"develop_branch": "develop"
+"develop_branch": "develop",
+"candidate_name": "candidate"
 ```
 ## Supported Endpoints
 

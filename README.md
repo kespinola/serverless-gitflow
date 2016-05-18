@@ -6,7 +6,7 @@ Easily manage gitflow with helpful endpoints for creating candidates and release
 
 ## Goal
 
-Expose a serious of endpoints that make managing an affective gitflow with ease.
+Expose a series of endpoints that make managing an affective gitflow with ease.
 
 ## Milestones
 - [X] Create candidate branch

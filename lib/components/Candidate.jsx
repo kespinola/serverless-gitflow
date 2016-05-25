@@ -1,30 +1,57 @@
 import React, { PropTypes } from 'react';
 import labelConfig from './../config/labels';
 import { join } from 'underscore.string';
+import moment from 'moment';
 
 const i18n = {
-  keyHeader: 'Label Key',
+  assignee: 'Assignee',
   emoji: 'Emoji',
+  keyHeader: 'Label Key',
   label: 'Label',
+  labels: 'Labels',
+  mergedAt: 'Merged At',
+  title: 'Title',
 };
 
 const Candidate = ({ pulls, title }) => (
   <article>
     <h1>{title}</h1>
-    <ul>
-      {pulls.map(({
-        html_url: url,
-        id,
-        labels,
-        number,
-        title: pullTitle,
-      }) => (
-        <li key={id}>
-          <a href={url}>{`#${number} - ${pullTitle} `}</a>
-          {join(' ', ...labels.map(({ name }) => labelConfig[name]))}
-        </li>
-      ))}
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>{i18n.title}</th>
+          <th>{i18n.assignee}</th>
+          <th>{i18n.mergedAt}</th>
+          <th>{i18n.labels}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {pulls.map(({
+          html_url: url,
+          id,
+          labels,
+          number,
+          assignee,
+          title: pullTitle,
+          merged_at: mergedAt,
+        }) => (
+          <tr key={id}>
+            <td>{number}</td>
+            <td><a href={url}>{pullTitle}</a></td>
+            <td>
+              {assignee && (
+                <a href={assignee.html_url}>
+                  {`@${assignee.login}`}
+                </a>
+              )}
+            </td>
+            <td>{moment(mergedAt).format('MMM DD')}</td>
+            <td>{join(' ', ...labels.map(({ name }) => labelConfig[name]))}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
     <h3>{i18n.keyHeader}</h3>
     <table>
       <thead>

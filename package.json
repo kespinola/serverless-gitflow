@@ -19,6 +19,7 @@
     "bluebird": "^3.3.5",
     "github": "^0.2.4",
     "immutable": "^3.8.1",
+    "moment": "^2.13.0",
     "react": "^15.1.0",
     "react-dom": "^15.0.2",
     "serverless-runtime-babel": "0.0.6"

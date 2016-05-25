@@ -9,7 +9,7 @@ const i18n = {
   keyHeader: 'Label Key',
   label: 'Label',
   labels: 'Labels',
-  mergedAt: 'Merged At',
+  mergedAt: 'Merged',
   title: 'Title',
 };
 

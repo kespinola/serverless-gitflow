@@ -9,13 +9,17 @@
     "type": "git",
     "url": "git://github.com/"
   },
+  "scripts": {
+    "test": "mocha $(find . -type d -name '__tests__' -not -path '*/node_modules/*') --opts .mocha.opts"
+  },
   "dependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
     "bluebird": "^3.3.5",
     "github": "^0.2.4",
     "immutable": "^3.8.1",
-    "react": "^15.0.2",
+    "react": "^15.1.0",
     "react-dom": "^15.0.2",
     "serverless-runtime-babel": "0.0.6"
   },

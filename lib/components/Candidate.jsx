@@ -13,9 +13,8 @@ const i18n = {
   title: 'Title',
 };
 
-const Candidate = ({ pulls, title }) => (
+const Candidate = ({ pulls }) => (
   <article>
-    <h1>{title}</h1>
     <table>
       <thead>
         <tr>

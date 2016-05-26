@@ -73,7 +73,6 @@ const Candidate = ({ pulls }) => (
 
 Candidate.propTypes = {
   pulls: PropTypes.array,
-  title: PropTypes.string,
 };
 
 export default Candidate;

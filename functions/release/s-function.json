@@ -4,7 +4,7 @@
   "description": "Serverless Lambda function for project: serverless-gitflow",
   "customName": false,
   "customRole": false,
-  "handler": "handler.default",
+  "handler": "functions/release/handler.default",
   "timeout": 6,
   "memorySize": 1024,
   "authorizer": {},

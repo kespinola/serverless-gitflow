@@ -9,7 +9,11 @@
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": []
+    "runtime": {
+      "babel": {
+        "presets": ["es2015",  "stage-0", "react"]
+      }
+    }
   },
   "endpoints": [
     {
@@ -21,7 +25,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": "{ \"repository\" : $input.json(\"$.repository\") }"
       },
       "responses": {
         "400": {
@@ -42,9 +46,11 @@
   ],
   "events": [],
   "environment": {
+    "GITHUB_TOKEN": "${github_token}",
+    "MASTER_BRANCH": "${master_branch}",
     "SERVERLESS_PROJECT": "${project}",
-    "SERVERLESS_STAGE": "${stage}",
-    "SERVERLESS_REGION": "${region}"
+    "SERVERLESS_REGION": "${region}",
+    "SERVERLESS_STAGE": "${stage}"
   },
   "vpc": {
     "securityGroupIds": [],

@@ -9,13 +9,12 @@ const i18n = {
   keyHeader: 'Label Key',
   label: 'Label',
   labels: 'Labels',
-  mergedAt: 'Merged At',
+  mergedAt: 'Merged',
   title: 'Title',
 };
 
-const Candidate = ({ pulls, title }) => (
+const Candidate = ({ pulls }) => (
   <article>
-    <h1>{title}</h1>
     <table>
       <thead>
         <tr>
@@ -74,7 +73,6 @@ const Candidate = ({ pulls, title }) => (
 
 Candidate.propTypes = {
   pulls: PropTypes.array,
-  title: PropTypes.string,
 };
 
 export default Candidate;

@@ -18,7 +18,7 @@
   "endpoints": [
     {
       "path": "candidate",
-      "method": "GET",
+      "method": "POST",
       "type": "AWS",
       "authorizationType": "none",
       "authorizerFunction": false,

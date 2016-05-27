@@ -2,7 +2,7 @@
 
 Easily manage gitflow with helpful endpoints for creating candidates and releases.
 
-![candidate body](https://raw.githubusercontent.com/ksespinola/serverless-gitflow/b213cccf4f11094f16625cf30056ed11409be574/public/candidate-body-screenshot.png)
+![candidate body](https://github.com/ksespinola/serverless-gitflow/blob/develop/public/candidate-body-screenshot.png?raw=true)
 
 ## Milestones
 - [X] Create candidate branch
@@ -10,11 +10,11 @@ Easily manage gitflow with helpful endpoints for creating candidates and release
 - [ ] Build PR message using merge pull commits
   - [X] Calculate pulls since last master merge
   - [X] Link to Pull Request
-  - [ ] Pull Feature Labels
-  - [ ] Note Assign
+  - [X] Pull Feature Labels
+  - [X] Note Assign
   - [ ] Slack assign
-- [ ] Smart calculate version
 - [ ] After merge into master release webhook tags a new release
+- [ ] Smart calculate version
 
 ## Set Up
 1. `npm install -g serverless`

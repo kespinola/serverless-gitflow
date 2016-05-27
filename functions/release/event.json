@@ -1,1 +1,8 @@
-{}
+{
+  "repository": {
+    "name": "serverless-gitflow",
+    "owner": {
+      "name": "ksespinola"
+    }
+  }
+}

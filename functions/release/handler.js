@@ -7,11 +7,8 @@ const i18n = {
   notCandidateMerge: 'Not a closed master pull request',
 };
 
-export default compose(
-  ifElse(
-    ({ merged_at, head: { ref } }) => not(isNil(merged_at)) && equals(ref, MASTER_BRANCH),
-    release,
-    () => ({ message: i18n.notCandidateMerge, status: 422 })
-  ),
-  view(lensProp('repository'))
+export default ifElse(
+  ({ pull_request: { base: { ref }, merged_at } }) => not(isNil(merged_at)) && equals(ref, MASTER_BRANCH),
+  release,
+  () => ({ message: i18n.notCandidateMerge, status: 422 })
 );
